@@ -12,7 +12,7 @@
 	<artifactId>NEXTItest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>NEXTItest</name>
-	<description>Test da empresa NEXTI</description>
+	<description>Teste da empresa NEXTI</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -32,6 +32,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency> <!-- Dependência necessária para mapeamento objeto 
+		relacional. JPA é o padrão Java para persistência de objetos 
+		em tabela de banco de dados -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
 	</dependencies>
 
 	<build>

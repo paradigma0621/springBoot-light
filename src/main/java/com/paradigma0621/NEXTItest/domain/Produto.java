@@ -10,7 +10,6 @@ import javax.persistence.Id;
 @Entity // Indica que essa classe será uma entidade do JPA
 		// Criará no banco de dados uma tabela Produto com todos os campos
 		// dessa classe de forma automática
-
 public class Produto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -18,16 +17,22 @@ public class Produto implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
 	private String nome;
+	private String descricao;
+	private Double preco;
+	private Integer quantidade;
 	
+
 	public Produto() {
 	}
 
-	public Produto(Integer id, String nome) {
+	public Produto(Integer id, String nome, String descricao, Double preco, Integer quantidade) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.quantidade = quantidade;
 	}
 
 	public Integer getId() {
@@ -44,6 +49,30 @@ public class Produto implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public Double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
 	}
 
 	@Override

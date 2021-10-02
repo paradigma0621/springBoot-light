@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity // Indica que essa classe será uma entidade do JPA
 		// Criará no banco de dados uma tabela Produto com todos os campos
 		// dessa classe de forma automática
